@@ -522,7 +522,7 @@ h1, h2, h3, p {
     border-radius: 4px;
     fill: var(--icon-main-color);
 
-    transition-property: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
 }
@@ -546,6 +546,10 @@ h1, h2, h3, p {
     align-items: baseline;
 }
 
+.footer-wrapper{
+    flex-grow: 1;
+}
+
 
 .address{
     font-style: normal;
@@ -553,12 +557,13 @@ h1, h2, h3, p {
 .adress-item{
     margin-bottom: 10px;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .adress-item:last-child{
     margin: 0;
 }
+
 
 
 .footer-logo{
@@ -572,10 +577,14 @@ h1, h2, h3, p {
 }
 .map{
     color: var(--main-txt-mode-dark);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mail,
 .phone{
  color: var(--primary-txt-mode-dark);
+
+ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  
 }
 
@@ -690,7 +699,7 @@ h1, h2, h3, p {
     position: absolute;
     bottom: 0px;
     
-    opacity: 0;
+    
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
@@ -698,7 +707,6 @@ h1, h2, h3, p {
 
 .project-item-link:hover .project-overlay,
 .project-item-link:focus .project-overlay{
-    opacity: 1;
     transform: translateY(0);
 }
 
@@ -867,6 +875,7 @@ h1, h2, h3, p {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     color:rgba(255, 255, 255, 1);
+    border: transparent;
 
     font-weight: 700;
     font-size: 16px;
@@ -961,11 +970,15 @@ h1, h2, h3, p {
     text-align: center;
     letter-spacing: 0.03em;
     color: rgba(33, 33, 33, 1);
+
+    
 }
 
 .form{
     margin-top: auto;
     margin-right: auto;
+
+    padding-top: 12px;
     
 }
 
@@ -978,14 +991,15 @@ h1, h2, h3, p {
    
 }
 
+.field-comment{
+    margin-bottom: 0;
+}
+
+
 .form-field .label{
     margin-bottom: 4px;
 }
 
-
-.username{
-    margin-top: 12px;
-}
 
 .icon-form{
     position: absolute;
@@ -995,9 +1009,7 @@ h1, h2, h3, p {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.userphone{
-    margin-top: 10px;
-}
+
  .input{
     padding: 0;
     margin: 0;
@@ -1019,10 +1031,11 @@ h1, h2, h3, p {
 }
 
 
-textarea{
+.textarea{
     resize: none;
     height: 120px;
     padding: 12px 16px;
+
 }
 
 .label{
@@ -1043,10 +1056,10 @@ textarea{
 }
 
 .label-checkbox{
-    margin-left: 37px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
-   
 }
 
 .input-checkbox{
@@ -1066,8 +1079,6 @@ textarea{
 
 
 .checkbox-icon{
-    position: absolute;
-    left: 52px;
     display: inline-block;
 
     width: 16px;
@@ -1075,6 +1086,8 @@ textarea{
 
     border: 2px solid  rgba(33, 33, 33, 1);
     border-radius: 4px;
+    margin-right: 9px;
+   
 }
 
 .checkbox-link{
@@ -1096,6 +1109,7 @@ textarea{
     background-color: var(--bg-icon-hover-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    border: transparent;
 
     font-size: 16px;
     line-height: 30px;
